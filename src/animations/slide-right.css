@@ -1,0 +1,15 @@
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: left .2s;
+  position: absolute;
+}
+
+.slide-right-enter-from,
+.slide-right-leave-to {
+  left: 100%;
+}
+
+.slide-right-enter-to,
+.slide-right-leave-from {
+  left: 0%;
+}

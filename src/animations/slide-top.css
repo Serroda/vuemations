@@ -1,0 +1,15 @@
+.slide-top-enter-active,
+.slide-top-leave-active {
+  transition: top .2s;
+  position: absolute;
+}
+
+.slide-top-enter-from,
+.slide-top-leave-to {
+  top: -100%;
+}
+
+.slide-top-enter-to,
+.slide-top-leave-from {
+  top: 0%;
+}
