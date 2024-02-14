@@ -1,8 +1,8 @@
 <template>
     <nav class="nav-main">
         <div class="nav-container">
-            <router-link class="mr-5" to="/">Home</router-link>
-            <router-link to="/slides">Slides</router-link>
+            <router-link class="mr-5" :to="{ path: '/' }">Home</router-link>
+            <router-link :to="{ path: '/slides' }">Slides</router-link>
         </div>
     </nav>
 </template>

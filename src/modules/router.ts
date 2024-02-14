@@ -5,9 +5,9 @@ import routes from '~pages'
 
 export const routerInstance = () => {
     const router = createRouter({
-        history: createWebHistory(),
+        history: createWebHistory(import.meta.env.BASE_URL),
         routes,
     })
 
-    return {router}
+    return { router }
 } 
