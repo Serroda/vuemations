@@ -14,6 +14,9 @@ export default defineConfig(({ mode }) => {
 
   return {
     base: "/vuemations/",
+    build: {
+      cssMinify: false
+    },
     resolve: {
       alias: {
         "~/": `${path.resolve(__dirname, "src")}/`,

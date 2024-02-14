@@ -10,10 +10,10 @@
   </div>
 </template>
 <script lang="ts" setup>
-import slideLeft from '../../animations/slide-left.css?inline'
-import slideRigth from '../../animations/slide-right.css?inline'
-import slideTop from '../../animations/slide-top.css?inline'
-import slideBottom from '../../animations/slide-bottom.css?inline'
+import slideLeft from '../../animations/slide-left.css?raw'
+import slideRigth from '../../animations/slide-right.css?raw'
+import slideTop from '../../animations/slide-top.css?raw'
+import slideBottom from '../../animations/slide-bottom.css?raw'
 </script>
 <style >
 @import url("../../animations/slide-left.css");
