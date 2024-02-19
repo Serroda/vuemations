@@ -16,6 +16,7 @@ onMounted(async () => {
 </script>
 <style>
 pre {
+  overflow: scroll;
   padding: 20px;
   border-radius: 8px;
 }
