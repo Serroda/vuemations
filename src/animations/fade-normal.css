@@ -1,0 +1,14 @@
+.fade-normal-enter-active,
+.fade-normal-leave-active {
+  transition: opacity .2s;
+}
+
+.fade-normal-enter-from,
+.fade-normal-leave-to {
+  opacity: 0;
+}
+
+.fade-normal-enter-to,
+.fade-normal-leave-from {
+  opacity: 1;
+}

@@ -1,8 +1,9 @@
 <template>
     <nav class="nav-main">
         <div class="nav-container">
-            <router-link class="mr-5" :to="{ path: '/' }">Home</router-link>
+            <router-link :to="{ path: '/' }">Home</router-link>
             <router-link :to="{ path: '/slides' }">Slides</router-link>
+            <router-link :to="{ path: '/fades' }">Fades</router-link>
         </div>
     </nav>
 </template>
@@ -10,11 +11,15 @@
 <style scoped>
 .nav-main,
 .nav-container {
-    height: 60px;
+    height: var(--nav-height);
 }
 
 .nav-main {
     box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background: var(--color-background);
 }
 
 .nav-container {
@@ -23,6 +28,7 @@
     margin: auto;
     display: flex;
     align-items: center;
+    gap: 16px;
 }
 
 .nav-main a {
