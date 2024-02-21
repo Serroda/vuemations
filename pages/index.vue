@@ -1,14 +1,10 @@
 <template>
   <div class="flex flex-col w-100% mt-100px items-center">
-    <img class="img-gradient" :src="img" width="300" />
+    <img class="img-gradient" src="/assets/imgs/vuemations.svg" width="300" />
     <h1 class="text-center mb-16px">Vuemations</h1>
     <p class="m-0">Animation collection for Vue</p>
   </div>
 </template>
-
-<script lang="ts" setup>
-import img from "~/assets/imgs/vuemations.svg"
-</script>
 
 <style scoped>
 @keyframes cloud {

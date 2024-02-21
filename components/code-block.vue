@@ -2,14 +2,22 @@
   <div v-html="content"></div>
 </template>
 <script lang="ts" setup>
-import { BundledLanguage } from 'shiki/langs';
+import { type BundledLanguage, codeToHtml } from "shiki";
 
 const content = ref("");
 const props = defineProps<{
   code: string;
   lang: BundledLanguage;
 }>();
-const { generate } = useCodeGenerator();
+
+async function generate(code: string, lang: BundledLanguage) {
+  const html = await codeToHtml(code, {
+    lang,
+    theme: "catppuccin-frappe"
+  });
+  return html;
+}
+
 onMounted(async () => {
   content.value = await generate(props.code, props.lang);
 });
