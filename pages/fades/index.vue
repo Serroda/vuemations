@@ -5,11 +5,10 @@
       animation-name="fade-left" lang="css" />
   </div>
 </template>
-<script lang="ts" setup>
-import fadeNormal from '../../animations/fade-normal.css?raw'
-import fadeLeft from '../../animations/fade-left.css?raw'
+
+<script setup lang="ts">
+const fadeNormalPromise = await useFetch("/api/files/fade-normal.css")
+const fadeLeftPromise = await useFetch("/api/files/fade-left.css")
+const fadeNormal = (fadeNormalPromise.data.value) as string
+const fadeLeft = (fadeLeftPromise.data.value) as string
 </script>
-<style >
-@import url("../../animations/fade-normal.css");
-@import url("../../animations/fade-left.css");
-</style>

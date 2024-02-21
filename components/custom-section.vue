@@ -15,7 +15,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { BundledLanguage } from 'shiki/langs';
+import { type BundledLanguage } from 'shiki/langs';
 const animationEnable = ref(true)
 const props = defineProps<{
   title: string,

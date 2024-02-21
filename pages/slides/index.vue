@@ -9,15 +9,15 @@
       lang="css" />
   </div>
 </template>
-<script lang="ts" setup>
-import slideLeft from '../../animations/slide-left.css?raw'
-import slideRigth from '../../animations/slide-right.css?raw'
-import slideTop from '../../animations/slide-top.css?raw'
-import slideBottom from '../../animations/slide-bottom.css?raw'
+<script setup lang="ts">
+
+const slideLeftPromise = await useFetch("/api/files/slide-left.css")
+const slideRightPromise = await useFetch("/api/files/slide-right.css")
+const slideTopPromise = await useFetch("/api/files/slide-top.css")
+const slideBottomPromise = await useFetch("/api/files/slide-bottom.css")
+
+const slideLeft = slideLeftPromise.data.value as string;
+const slideRigth = slideRightPromise.data.value as string;
+const slideTop = slideTopPromise.data.value as string;
+const slideBottom = slideBottomPromise.data.value as string; 
 </script>
-<style >
-@import url("../../animations/slide-left.css");
-@import url("../../animations/slide-right.css");
-@import url("../../animations/slide-top.css");
-@import url("../../animations/slide-bottom.css");
-</style>

@@ -1,0 +1,27 @@
+/*https://vuejs.org/guide/built-ins/transition#using-transitions-and-animations-together*/
+/*Adds the duration of the animation to the Transtion tag (:duration)*/
+
+.fade-left-leave-active,
+.fade-left-enter-active {
+  position: relative;
+}
+
+.fade-left-leave-active :after,
+.fade-left-enter-active :after {
+  transition: width 1s;
+  content: "";
+  position: absolute;
+  background: hsl(0, 0%, 90%);
+  width: 0px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 6px 0 12px hsl(0, 0%, 90%);
+}
+
+.fade-left-enter-from :after,
+.fade-left-leave-to :after {
+  width: 200px;
+  /* Or full width of the container */
+  /* width: 100%; */
+}
