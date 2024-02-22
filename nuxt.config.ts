@@ -4,17 +4,12 @@ export default defineNuxtConfig({
   css: ["./assets/css/main.css"],
   modules: ["@unocss/nuxt"],
   app: {
+    baseURL: "/vuemations/",
     pageTransition: {
       name: 'fade',
       mode: 'out-in'
     }
   },
-  // vite: {
-  //   build: {
-  //     cssMinify: false
-  //   }
-  // }
-  // ,
   nitro: {
     serverAssets: [{
       baseName: "animations",
