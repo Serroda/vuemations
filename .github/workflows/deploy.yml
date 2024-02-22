@@ -16,6 +16,8 @@ jobs:
           node-version: "20"
       # Pick your own package manager and build script
       - uses: pnpm/action-setup@v3
+        with:
+          version: 8
       - run: pnpm install
       - run: pnpm dlx nuxt build --preset github_pages
       - name: Upload artifact
