@@ -9,23 +9,25 @@
       </transition>
     </div>
     <button class="primary" @click="animationEnable = !animationEnable">ANIMATE</button>
-    <h3 class="mt-40px"> {{ subtitle }}</h3>
-    <code-block :lang :code></code-block>
+    <slot name="before-code-block" />
+    <h3 class="mt-40px"> Code CSS</h3>
+    <code-block lang="css" :code></code-block>
     <button @click="copyCode">COPY</button>
   </div>
 </template>
 <script lang="ts" setup>
-import { type BundledLanguage } from 'shiki/langs';
+
 const animationEnable = ref(true)
 const props = defineProps<{
   title: string,
-  subtitle: string,
-  code: string,
   animationName: string,
-  lang: BundledLanguage,
   duration?: number
 }>()
+
+const promiseCode = await useFetch("/api/files/" + props.animationName + ".css")
+const code = promiseCode.data.value as string
+
 function copyCode() {
-  if (navigator.clipboard) navigator.clipboard.writeText(props.code)
+  if (navigator.clipboard) navigator.clipboard.writeText(code)
 }
 </script>

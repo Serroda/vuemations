@@ -6,6 +6,16 @@
 <script setup lang="ts">
 useHead({
   title: "Vuemations",
+  htmlAttrs: {
+    lang: 'en'
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      href: '/favicon.ico'
+    }
+  ]
 })
 useSeoMeta({
   title: 'Vuemations',

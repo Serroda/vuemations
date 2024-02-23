@@ -1,14 +1,24 @@
 <template>
   <div class="w-100%">
-    <custom-section title="Normal fade" subtitle="Code CSS" :code="fadeNormal" animation-name="fade-normal" lang="css" />
-    <custom-section title="Fade from left" subtitle="Code CSS" :duration="1000" :code="fadeLeft"
-      animation-name="fade-left" lang="css" />
+    <custom-section title="Normal fade" animation-name="fade-normal" />
+    <custom-section title="Fade from left" :duration="1000" animation-name="fade-left">
+      <template #['before-code-block']>
+        <h3 class="mt-40px c-red-600">Warning</h3>
+        <p>To make it work add the animation duration to the :duration parameter of the Transition tag. In this case
+          :duration = "1000"</p>
+        <a href="https://vuejs.org/guide/built-ins/transition#using-transitions-and-animations-together"
+          target="_blank">How to do</a>
+      </template>
+    </custom-section>
+    <custom-section title="Fade from right" :duration="1000" animation-name="fade-right">
+      <template #['before-code-block']>
+        <h3 class="mt-40px c-red-600">Warning</h3>
+        <p>To make it work add the animation duration to the :duration parameter of the Transition tag. In this case
+          :duration = "1000"</p>
+        <a href="https://vuejs.org/guide/built-ins/transition#using-transitions-and-animations-together"
+          target="_blank">How to do</a>
+      </template>
+    </custom-section>
   </div>
 </template>
 
-<script setup lang="ts">
-const fadeNormalPromise = await useFetch("/api/files/fade-normal.css")
-const fadeLeftPromise = await useFetch("/api/files/fade-left.css")
-const fadeNormal = (fadeNormalPromise.data.value) as string
-const fadeLeft = (fadeLeftPromise.data.value) as string
-</script>
