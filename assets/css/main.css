@@ -60,6 +60,12 @@ button {
   cursor: pointer;
   border-radius: 4px;
   font-weight: 700;
+  background: rgb(239, 239, 239);
+  transition: background .2s;
+}
+
+button:hover {
+  background: rgb(219, 219, 219);
 }
 
 button.primary {
