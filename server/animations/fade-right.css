@@ -1,28 +1,26 @@
 .fade-right-leave-active,
 .fade-right-enter-active {
+  --background-color: hsl(0, 0%, 90%);
   position: relative;
 }
 
 .fade-right-leave-active :before,
 .fade-right-enter-active :before {
-  transition: left 1s;
+  transition: transform 1s;
   content: "";
   position: absolute;
-  background: hsl(0, 0%, 90%);
-  box-shadow: -6px 0 12px hsl(0, 0%, 90%);
-
+  background: var(--background-color);
+  box-shadow: -6px 0 12px var(--background-color);
   /* Or full width of the container */
   /* width: 100%; */
   width: 200px;
-  left: 0px;
-
-  top: 0;
+  left: 0;
   height: 100%;
 }
 
 .fade-right-enter-to :before,
 .fade-right-leave-from :before {
-  left: 200px;
   /* Or full width of the container */
-  /* left: 100%; */
+  /* transform:translateX(100%); */
+  transform: translateX(200px);
 }

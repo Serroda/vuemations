@@ -1,15 +1,16 @@
 .slide-left-enter-active,
 .slide-left-leave-active {
-  transition: left .2s;
-  position: absolute;
+  transition: transform .2s;
 }
 
 .slide-left-enter-from,
 .slide-left-leave-to {
-  left: -100%;
+  /* Or full width */
+  /* transform: translateX(-100%); */
+  transform: translateX(-200px);
 }
 
 .slide-left-enter-to,
 .slide-left-leave-from {
-  left: 0%;
+  transform: translateX(0%);
 }

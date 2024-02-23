@@ -5,7 +5,7 @@
         {{ title }}
       </a>
     </h1>
-    <div class="animation-container relative h-80px mb-16px overflow-hidden">
+    <div class="animation-container relative h-80px mb-16px w-100% overflow-hidden">
       <transition :name="animationName" :duration>
         <div class="p-20px" v-if="animationEnable">
           <p class="m-0 truncate"> This text is for example</p>

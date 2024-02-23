@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col w-100% mt-100px items-center">
     <img class="img-gradient" src="/assets/imgs/vuemations.svg" width="300" />
-    <h1 class="text-center mb-16px">Vuemations</h1>
+    <h1 class="text-center mt-24px mb-16px">Vuemations</h1>
     <p class="m-0">Animation collection for Vue</p>
   </div>
 </template>

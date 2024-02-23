@@ -1,15 +1,14 @@
 .slide-bottom-enter-active,
 .slide-bottom-leave-active {
-  transition: top .2s;
-  position: absolute;
+  transition: transform .2s;
 }
 
 .slide-bottom-enter-from,
 .slide-bottom-leave-to {
-  top: 100%;
+  transform: translateY(100%)
 }
 
 .slide-bottom-enter-to,
 .slide-bottom-leave-from {
-  top: 0%;
+  transform: translateY(0%)
 }
