@@ -6,7 +6,7 @@
         <h3 class="mt-40px c-red-600">Warning</h3>
         <p>To make it work add the animation duration to the :duration parameter of the Transition tag. In this case
           :duration = "1000"</p>
-        <a href="https://vuejs.org/guide/built-ins/transition#using-transitions-and-animations-together"
+        <a href="https://vuejs.org/guide/built-ins/transition#nested-transitions-and-explicit-transition-durations"
           target="_blank">How to do</a>
       </template>
     </custom-section>
@@ -15,7 +15,7 @@
         <h3 class="mt-40px c-red-600">Warning</h3>
         <p>To make it work add the animation duration to the :duration parameter of the Transition tag. In this case
           :duration = "1000"</p>
-        <a href="https://vuejs.org/guide/built-ins/transition#using-transitions-and-animations-together"
+        <a href="https://vuejs.org/guide/built-ins/transition#nested-transitions-and-explicit-transition-durations"
           target="_blank">How to do</a>
       </template>
     </custom-section>
