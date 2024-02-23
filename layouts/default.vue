@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen">
+  <div>
     <nav class="nav-main">
       <div class="nav-container">
         <router-link :to="{ path: '/' }">Home</router-link>

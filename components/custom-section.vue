@@ -1,6 +1,10 @@
 <template>
-  <div class="pt-20px mb-30px">
-    <h1 class="mt-0"> {{ title }}</h1>
+  <div class="pb-30px pt-30px">
+    <h1 :id="animationName" class="mt-0px custom-scroll-margin">
+      <a :href="'#' + animationName">
+        {{ title }}
+      </a>
+    </h1>
     <div class="animation-container relative h-80px mb-16px overflow-hidden">
       <transition :name="animationName" :duration>
         <div class="p-20px" v-if="animationEnable">
@@ -31,3 +35,9 @@ function copyCode() {
   if (navigator.clipboard) navigator.clipboard.writeText(code)
 }
 </script>
+
+<style scoped>
+.custom-scroll-margin {
+  scroll-margin-top: calc(var(--nav-height) + 12px);
+}
+</style>
