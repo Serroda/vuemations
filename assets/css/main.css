@@ -29,20 +29,15 @@ h1 a {
   color: hsl(0, 0%, 10%);
 }
 
-h1:has(a) {
-  position: relative;
-}
 
-h1 a:before {
-  position: absolute;
-  content: "#";
-  left: -30px;
+h1 a:after {
+  content: " #";
   color: var(--color-primary);
   transition: opacity .2s;
   opacity: 0;
 }
 
-h1 a:hover:before {
+h1 a:hover:after {
   opacity: 1;
 }
 
