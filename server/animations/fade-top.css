@@ -1,0 +1,26 @@
+.fade-top-leave-active,
+.fade-top-enter-active {
+  --background-color: hsl(0, 0%, 90%);
+  position: relative;
+}
+
+.fade-top-leave-active :before,
+.fade-top-enter-active :before {
+  transition: transform 1s;
+  content: "";
+  position: absolute;
+  background: var(--background-color);
+  box-shadow: 0 6px 12px var(--background-color);
+  /* Or full width of the container */
+  /* width: 100%; */
+  width: 200px;
+  transform: translateY(0%);
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.fade-top-enter-to :before,
+.fade-top-leave-from :before {
+  transform: translateY(-100%);
+}
