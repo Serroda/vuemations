@@ -5,7 +5,7 @@
 </template>
 <script setup lang="ts">
 useHead({
-  title: "Vuemations",
+  title: 'Vuemations',
   htmlAttrs: {
     lang: 'en'
   },
