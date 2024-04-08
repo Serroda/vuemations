@@ -5,6 +5,7 @@
         <router-link :to="{ path: '/' }">Home</router-link>
         <router-link :to="{ path: '/slides' }">Slides</router-link>
         <router-link :to="{ path: '/fades' }">Fades</router-link>
+        <router-link :to="{ path: '/drawings' }">Drawings</router-link>
       </div>
     </nav>
     <div class="flex items-center layout-dimensions m-auto height-minus-nav">
@@ -12,7 +13,6 @@
     </div>
   </div>
 </template>
-
 <style scoped>
 .nav-main,
 .nav-container {
