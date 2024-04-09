@@ -6,7 +6,7 @@ import { type BundledLanguage, codeToHtml } from "shiki";
 
 const content = ref("");
 const props = defineProps<{
-  code: string;
+  code: string | undefined;
   lang: BundledLanguage;
 }>();
 
@@ -18,9 +18,12 @@ async function generate(code: string, lang: BundledLanguage) {
   return html;
 }
 
-onMounted(async () => {
+async function createContent() {
+  if (!props.code) return
   content.value = await generate(props.code, props.lang);
-});
+}
+
+watch(() => props.code, createContent, { immediate: true })
 </script>
 <style>
 pre {

@@ -1,0 +1,9 @@
+.draw-svg-text svg {
+  stroke-dasharray: 57;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 2s;
+}
+
+.draw-svg-text.active svg {
+  stroke-dashoffset: 57;
+}
