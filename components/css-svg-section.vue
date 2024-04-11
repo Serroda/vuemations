@@ -7,7 +7,9 @@
       </a>
     </h1>
     <div :class="containerClass" class="animation-container relative h-80px mb-16px w-100% overflow-hidden">
-      <slot name="svg"></slot>
+      <div ref="containerSvg" class="p-20px">
+        <slot name="svg"></slot>
+      </div>
     </div>
     <button class="primary" @click="animationEnable = !animationEnable">ANIMATE</button>
 
@@ -23,14 +25,13 @@
   </div>
 </template>
 <script lang="ts" setup>
-const slots = useSlots()
 const animationEnable = ref(false)
 const codeSvg = ref("")
 const props = defineProps<{
   title: string,
   animationName: string,
 }>()
-
+const containerSvg: Ref<HTMLDivElement | null> = ref(null)
 const containerClass = computed(() => `${props.animationName} ${animationEnable.value ? 'active' : ''}`);
 const promiseCodeCss = await useFetch("/api/files/" + props.animationName + ".css")
 const codeCss = promiseCodeCss.data.value as string
@@ -40,8 +41,7 @@ function copyCode(code: string | undefined) {
 }
 
 onMounted(() => {
-  if (!slots.svg) return
-  codeSvg.value = slots.svg ? slots.svg()[0].el?.innerHTML : ''
+  codeSvg.value = containerSvg.value?.firstElementChild ? containerSvg.value.firstElementChild?.outerHTML : ''
 })
 
 </script>
