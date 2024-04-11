@@ -23,11 +23,12 @@
   </div>
 </template>
 <script lang="ts" setup>
+const slots = useSlots()
 const animationEnable = ref(false)
+const codeSvg = ref("")
 const props = defineProps<{
   title: string,
   animationName: string,
-  codeSvg: string | undefined
 }>()
 
 const containerClass = computed(() => `${props.animationName} ${animationEnable.value ? 'active' : ''}`);
@@ -37,5 +38,10 @@ const codeCss = promiseCodeCss.data.value as string
 function copyCode(code: string | undefined) {
   if (navigator.clipboard && code) navigator.clipboard.writeText(code)
 }
+
+onMounted(() => {
+  if (!slots.svg) return
+  codeSvg.value = slots.svg ? slots.svg()[0].el?.innerHTML : ''
+})
 
 </script>

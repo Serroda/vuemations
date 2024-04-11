@@ -20,7 +20,7 @@
 }
 
 .nav-main {
-  box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 4px rgb(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   z-index: 1;
